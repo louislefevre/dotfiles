@@ -21,6 +21,10 @@ Background Enabled: true
 # Hostname Visibility
 Hostname Enabled: true
 
+# Other
+Logo: archlinux
+Background: space-2.jpg
+
 
 ### Style ###
 # Window Appearance
