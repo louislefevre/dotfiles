@@ -1,0 +1,48 @@
+### GENERAL ###
+# User Functionality
+Show User Switcher: false
+
+# Date & Time
+Date Enabled: false
+Date Format: <em>%A</em>, the <em>%o</em> of <em>%B</em>
+Time Enabled: true
+Time Format: %H:%M
+
+# Command Visibility
+Shutdown Enabled: true
+Reboot Enabled: true
+Hibernate Enabled: true
+Sleep Enabled: true
+
+# Avatar Visibility
+Avatar Enabled: false
+Background Enabled: true
+
+# Hostname Visibility
+Hostname Enabled: true
+
+
+### Style ###
+# Window Appearance
+Border Radius: 30px
+Font Size: 1em
+DPI Zoom: 1
+
+# Eye Candy
+Experimental Stars: true
+
+# Command Panel
+Icons Enabled: true
+Text Align: left
+Background Color: RGBA(19,1,1,0.67)
+Icon Color: RGBA(218,43,43,1)
+Text Color: RGBA(255,255,255,0.9)
+
+# Login Panel
+Border Enabled: false
+Border Color: RGBA(0,0,0,0)
+Gradient-Top: RGBA(10,5,5,0.67)
+Gradient-Bottom: RGBA(14,7,7,1)
+Button Color: RGBA(9,6,6,0.6)
+Username: RGBA(255,255,255,1)
+
