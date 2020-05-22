@@ -1,0 +1,9 @@
+autocmd vimenter * colorscheme gruvbox
+set background=dark
+set termguicolors
+
+:filetype plugin on
+:syntax on
+:filetype indent on
+:set number
+set spell
