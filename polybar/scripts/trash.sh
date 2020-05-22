@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BAR_ICON=""
-LIST=$(trash-list)
+LIST=$(trash-list 2> /dev/null)
 
 if [ -z "$LIST" ]; then
   echo "$BAR_ICON"
