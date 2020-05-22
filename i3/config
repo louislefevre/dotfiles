@@ -25,7 +25,7 @@ exec --no-startup-id xrandr --output DP-5 --left-of DP-0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Feh
-exec --no-startup-id feh --bg-scale ~/Pictures/system-images/background/keyboard.jpg
+exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/wallpaper.png
 
 ##########################################################################################
 ####################################### KEYBINDS #########################################
@@ -37,6 +37,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Move floating windows (use Mouse+$mod to drag)
 floating_modifier $mod
@@ -48,7 +52,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Open program launcher
-bindsym $mod+d exec rofi -show
+bindsym $mod+d exec rofi -theme gruvbox-dark-soft -show
 
 # Change focus
 bindsym $mod+h focus left
