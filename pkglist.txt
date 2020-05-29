@@ -17,6 +17,7 @@ fakeroot
 feh
 file
 findutils
+firefox
 flex
 gawk
 gcc
@@ -43,6 +44,7 @@ linux
 linux-firmware
 linux-headers
 m4
+maim
 make
 mtools
 neofetch
@@ -56,6 +58,7 @@ pacman
 pacman-contrib
 patch
 pkgconf
+playerctl
 polybar
 pulseaudio
 python-dbus
@@ -65,7 +68,6 @@ ranger
 rofi
 sed
 spotify
-spotify-tui
 sudo
 texinfo
 thunar
@@ -129,3 +131,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay
+zoom
