@@ -2,6 +2,12 @@ autocmd vimenter * colorscheme gruvbox
 set background=dark
 set termguicolors
 
+:set expandtab
+:set shiftwidth=4
+:set tabstop=4
+:set autoindent
+:set smartindent
+
 :filetype plugin on
 :syntax on
 :filetype indent on
