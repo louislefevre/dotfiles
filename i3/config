@@ -5,6 +5,7 @@ focus_follows_mouse no
 # i3-gaps
 for_window [class=".*"] border pixel 0
 gaps inner 10
+gaps outer -5
 
 # Fonts
 font pango:monospace 8
@@ -13,19 +14,20 @@ font pango:monospace 8
 # Network
 exec --no-startup-id nm-applet
 
-# Lock screen
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 # XRandr
-exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144
-exec --no-startup-id xrandr --output DP-5 --mode 1920x1080 --rate 60
-exec --no-startup-id xrandr --output DP-5 --left-of DP-0
+#exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144
+#exec --no-startup-id xrandr --output DP-5 --mode 1920x1080 --rate 60
+#exec --no-startup-id xrandr --output DP-5 --left-of DP-0
+#exec --no-startup-id xrandr --output HDMI-0 --off
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Feh
 exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/wallpaper.png
+
+# Disks
+exec --no-startup-id udisksctl mount -b /dev/sdb1
 
 ##########################################################################################
 ####################################### KEYBINDS #########################################
