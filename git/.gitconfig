@@ -8,12 +8,11 @@
 [alias]
 	st = status
 	cm = commit
-    lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
-    date = "!f() { \
-			old_date=$(git log -1 --format=%cd); \
-			new_date=$(date --date="$1+day+ago"); \
-			echo "Old Date:" ${old_date}; \
-			echo "New Date:" ${new_date}; \
-			GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
+        lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
+        date = "!f() { \
+            old_date=$(git log -1 --format=%cd); \
+            new_date=$(date --date="$1+day+ago"); \
+            echo "Old Date:" ${old_date}; \
+            echo "New Date:" ${new_date}; \
+            GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
-
