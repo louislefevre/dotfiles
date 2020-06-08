@@ -1,0 +1,17 @@
+[user]
+	name = Louis Lefevre
+	email = louislefev@gmail.com
+[core]
+	editor = vim
+[credential]
+	helper = store
+[alias]
+	st = status
+	cm = commit
+	date = "!f() { \
+			old_date=$(git log -1 --format=%cd); \
+			new_date=$(date --date="$1+day+ago"); \
+			echo "Old Date:" ${old_date}; \
+			echo "New Date:" ${new_date}; \
+			GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
+		}; f"
