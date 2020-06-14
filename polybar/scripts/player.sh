@@ -7,7 +7,7 @@ sanitize() {
     if (( $length > 60 )); then
         echo "$(echo ${str:0:60} | xargs)..."
     else
-        echo "$(echo $str | xargs)" 
+        echo "$(echo $str | xargs)"
     fi
 }
 
@@ -19,13 +19,12 @@ if [ "$player_name" = "spotify" ]; then
     player_info="$(sanitize "$player_info")"
 
     if [ "$player_status" = "Playing" ]; then
-        echo " $player_info"
+        echo "󰐍 $player_info"
     elif [ "$player_status" = "Paused" ]; then
-        echo " $player_info"
+        echo "󰏦 $player_info"
     else
          echo ""
     fi
 else
     echo ""
 fi
-

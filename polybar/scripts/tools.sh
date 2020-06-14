@@ -27,7 +27,7 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Tools :' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Monitor Mode|  TV Mode")"
+<<< "󰍹  Monitor Mode|󰟴  TV Mode")"
 case "$MENU" in
   *"Monitor Mode") xrandr --output HDMI-0 --off && pactl set-card-profile 0 output:hdmi-stereo ;;
   *"TV Mode") xrandr --output HDMI-0 --auto --same-as DP-0 && pactl set-card-profile 0 output:hdmi-stereo-extra1 ;;

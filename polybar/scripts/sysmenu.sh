@@ -51,7 +51,7 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "  Logout|  Suspend|  Reboot|  Shutdown")"
+<<< "󰗽  Logout|󰤁  Suspend|󰦛  Reboot|󰐥  Shutdown")"
 case "$MENU" in
   *Logout) i3-msg exit ;;
   *Suspend) systemctl suspend ;;
