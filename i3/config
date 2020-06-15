@@ -8,8 +8,7 @@ gaps inner 10
 gaps outer -5
 
 # Fonts
-font pango:monospace 8
-#font pango:DejaVu Sans Mono 8
+font pango:Fira Mono 8
 
 # Network
 exec --no-startup-id nm-applet
@@ -21,12 +20,12 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id xrandr --output HDMI-0 --off
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Feh
 exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/wallpaper.png
 
-# Disks
+# Disk Mounting
 exec --no-startup-id udisksctl mount -b /dev/sdb1
 
 ##########################################################################################
@@ -174,3 +173,38 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 ##########################################################################################
+####################################### STATUS BAR #######################################
+bar {
+    font pango:Fira Mono, FontAwesome 12
+    output primary
+    tray_output none
+    position top
+    workspace_min_width 30
+    status_command i3status-rs $HOME/.config/i3/status.toml
+    colors {
+        separator #666666
+        background #282828
+        statusline #DDDDDD
+        focused_workspace #D79921 #D79921 #EBDBB2
+        active_workspace #333333 #333333 #EBDBB2
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #CC241D #CC241D #EBDBB2
+    }
+}
+
+bar {
+    font pango: Fira Mono 12
+    output DP-5
+    tray_output DP-5
+    position top
+    workspace_min_width 30
+    colors {
+        separator #666666
+        background #282828
+        statusline #DDDDDD
+        focused_workspace #D79921 #D79921 #EBDBB2
+        active_workspace #333333 #333333 #EBDBB2
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #CC241D #CC241D #EBDBB2
+    }
+}
