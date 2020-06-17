@@ -2,14 +2,6 @@
 # i3
 focus_follows_mouse no
 
-# i3-gaps
-for_window [class=".*"] border pixel 0
-gaps inner 10
-gaps outer -5
-
-# Fonts
-font pango:Fira Mono 8
-
 # Network
 exec --no-startup-id nm-applet
 
@@ -23,10 +15,70 @@ exec --no-startup-id nm-applet
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Feh
-exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/wallpaper.png
+exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/cpu.jpg
 
 # Disk Mounting
 exec --no-startup-id udisksctl mount -b /dev/sdb1
+
+# Discord
+exec --no-startup-id discord
+
+##########################################################################################
+####################################### DESIGN  ##########################################
+# Colour variables
+set_from_resource $background background #282828
+set_from_resource $foreground foreground #ebdbb2
+set_from_resource $color0 color0 #282828
+set_from_resource $color1 color1 #cc241d
+set_from_resource $color2 color2 #98971a
+set_from_resource $color3 color3 #d79921
+set_from_resource $color4 color4 #458588
+set_from_resource $color5 color5 #b16286
+set_from_resource $color6 color6 #689d6a
+set_from_resource $color7 color7 #a89984
+set_from_resource $color8 color8 #928374
+set_from_resource $color9 color9 #fb4934
+set_from_resource $color10 color10 #b8bb26
+set_from_resource $color11 color11 #fabd2d
+set_from_resource $color12 color12 #83a598
+set_from_resource $color13 color13 #d3869b
+set_from_resource $color14 color14 #8ec07c
+set_from_resource $color15 color15 #ebdbb2
+
+# Fonts
+font pango:Fira Sans 8
+
+# i3 Gaps
+for_window [class=".*"] border pixel 1
+gaps inner 10
+gaps outer -5
+
+# Borders
+# Class          Border   Background  Text     Indicator  Child Border
+client.focused   #4c7899  #285577     #ffffff  #2e9ef4    #d79921
+
+##########################################################################################
+####################################### WORKSPACES #######################################
+# Workspace variables
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Default workspace screens
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-5
+workspace $ws4 output DP-5
+
+# Default client workspaces
+assign [class="discord"] $ws4
 
 ##########################################################################################
 ####################################### KEYBINDS #########################################
@@ -101,18 +153,6 @@ bindsym $mod+a focus parent
 # Focus the child container
 #bindsym $mod+d focus child
 
-# Workspace names
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -154,17 +194,19 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
         bindsym Left resize shrink width 10 px or 10 ppt
+        
+        # Pressing right will grow the window’s width.
+        bindsym j resize grow height 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
+        
+        # Pressing up will shrink the window’s height.
+        bindsym k resize shrink height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
+        
+        # Pressing down will grow the window’s height.
+        bindsym l resize grow width 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
         # Return to normal mode
@@ -183,12 +225,12 @@ bar {
     status_command i3status-rs $HOME/.config/i3/status.toml
     colors {
         separator #666666
-        background #282828
+        background $background
         statusline #DDDDDD
-        focused_workspace #D79921 #D79921 #EBDBB2
-        active_workspace #333333 #333333 #EBDBB2
+        focused_workspace $color3 $color3 $color15
+        active_workspace #333333 #333333 $color15
         inactive_workspace #333333 #333333 #888888
-        urgent_workspace #CC241D #CC241D #EBDBB2
+        urgent_workspace $color1 $color1 $color15
     }
 }
 
@@ -200,11 +242,11 @@ bar {
     workspace_min_width 30
     colors {
         separator #666666
-        background #282828
+        background $background
         statusline #DDDDDD
-        focused_workspace #D79921 #D79921 #EBDBB2
-        active_workspace #333333 #333333 #EBDBB2
+        focused_workspace $color3 $color3 $color15
+        active_workspace #333333 #333333 $color15
         inactive_workspace #333333 #333333 #888888
-        urgent_workspace #CC241D #CC241D #EBDBB2
+        urgent_workspace $color1 $color1 $color15
     }
 }

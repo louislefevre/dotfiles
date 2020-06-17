@@ -1,4 +1,8 @@
-icons = "awesome"
+[icons]
+name = "awesome5"
+[icons.overrides]
+memory_mem = "  "
+cpu = "  "
 
 [theme]
 name = "gruvbox-dark"
@@ -42,7 +46,7 @@ block = "pacman"
 
 [[block]]
 block = "custom"
-command = "echo  $($HOME/.config/i3/scripts/trash.sh)"
+command = "echo  $($HOME/.config/i3/scripts/trash.sh)"
 interval = 10
 
 [[block]]

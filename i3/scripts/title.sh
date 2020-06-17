@@ -10,6 +10,6 @@ window=$(echo $class | awk '{print $4}')
 window="${window%\"}"
 window="${window#\"}"
 
-# Output the (quoteless) window name
-echo $window
+# Output the (quoteless) window name with the first letter as uppercase
+echo "${window^}"
 
