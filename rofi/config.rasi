@@ -1,6 +1,7 @@
 configuration {
-    modi: "run,window,combi";
-    theme: "gruvbox-dark-soft";
-    font: "hack 10";
+    modi: "drun,window,combi";
     combi-modi: "window,drun,ssh";
+    font: "Fira Mono 10";
+    show-icons: true;
+    terminal: "kitty";
 }
