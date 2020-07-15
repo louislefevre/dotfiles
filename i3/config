@@ -2,23 +2,8 @@
 # i3
 focus_follows_mouse no
 
-# Network
-exec --no-startup-id nm-applet
-
-# XRandr
-#exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144
-#exec --no-startup-id xrandr --output DP-5 --mode 1920x1080 --rate 60
-#exec --no-startup-id xrandr --output DP-5 --left-of DP-0
-#exec --no-startup-id xrandr --output HDMI-0 --off
-
-# Polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # Feh
-exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/cpu.jpg
-
-# Disk Mounting
-exec --no-startup-id udisksctl mount -b /dev/sdb1
+exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/gruvbox-battery.png
 
 # Discord
 exec --no-startup-id discord
@@ -50,8 +35,8 @@ font pango:Fira Sans 8
 
 # i3 Gaps
 for_window [class=".*"] border pixel 1
-gaps inner 10
-gaps outer -5
+gaps inner 5
+gaps outer -4
 
 # Borders
 # Class          Border   Background  Text     Indicator  Child Border
@@ -90,16 +75,16 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+#bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+#bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+#bindsym XF86AudioNext exec --no-startup-id playerctl next
+#bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Move floating windows (use Mouse+$mod to drag)
 floating_modifier $mod
 
 # Open terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec urxvt
 
 # Kill window
 bindsym $mod+Shift+q kill

@@ -44,16 +44,16 @@ warning = 80
 [[block]]
 block = "pacman"
 
-[[block]]
-block = "custom"
-command = "echo  $($HOME/.config/i3/scripts/trash.sh)"
-interval = 10
+#[[block]]
+#block = "custom"
+#command = "echo  $($HOME/.config/i3/scripts/trash.sh)"
+#interval = 10
 
-[[block]]
-block = "custom"
-cycle = ["echo  OFF", "echo  ON"]
-on_click = "$HOME/.config/i3/scripts/modes.sh"
-interval = "once"
+#[[block]]
+#block = "custom"
+#cycle = ["echo  OFF", "echo  ON"]
+#on_click = "$HOME/.config/i3/scripts/modes.sh"
+#interval = "once"
 
 [[block]]
 block = "xrandr"

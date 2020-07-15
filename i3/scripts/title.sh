@@ -10,6 +10,7 @@ window=$(echo $class | awk '{print $4}')
 window="${window%\"}"
 window="${window#\"}"
 
-# Output the (quoteless) window name with the first letter as uppercase
-echo "${window^}"
+# Output the (quoteless) window name with the first letters as uppercase,
+# and remove any hyphens
+echo "${window}" | tr '-' ' ' | sed -e "s/\b\(.\)/\u\1/g"
 
