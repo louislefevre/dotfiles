@@ -1,0 +1,51 @@
+# Core
+base
+dhcpcd
+grub
+linux
+linux-firmware
+nvidia
+pipewire
+sudo
+vim
+xorg-server
+
+# Functional
+i3-gaps
+i3status-rust
+ranger
+rofi
+rxvt-unicode
+
+# Applications
+discord
+google-chrome
+intellij-idea-ultimate-edition
+pycharm-professional
+qbittorrent
+spotify
+vlc
+
+# Languages
+go
+jdk11-openjdk
+python
+rust
+
+# Utilies
+bpytop
+feh
+git
+ntfs-3g
+p7zip
+xorg-xinit
+xorg-xrandr
+
+# Fonts
+ttf-fira-code
+ttf-fira-mono
+ttf-fira-sans
+
+# Misc
+vim-airline
+
