@@ -43,6 +43,7 @@ xorg-xinit
 xorg-xrandr
 
 # Fonts
+noto-fonts-emoji
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
