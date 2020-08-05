@@ -233,6 +233,6 @@ bar {
 
 
 ####################################### AUTOSTART ########################################
-exec --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/system-images/background/gruvbox-battery.png
+exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/gruvbox-battery.png
 exec --no-startup-id discord
 
