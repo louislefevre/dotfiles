@@ -1,45 +1,46 @@
 [user]
-    name = Louis Lefevre
+	name = Louis Lefevre
     email = louislefev@gmail.com
 [core]
-    editor = vim
+	editor = vim
 [init]
     defaultBranch = master
 [credential]
-    helper = store
+	helper = store
 [web]
     browser = google-chrome
 [diff]
-    tool = vimdiff
+	tool = vimdiff
 [color "status"]
-    added = green bold
-    changed = yellow bold
-    untracked = red bold
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
 [color "branch"]
-    current = yellow bold
-    local = green bold
-    remote = cyan bold
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [alias]
-    st = status
-    cm = commit
+	st = status
+	cm = commit
     br = branch
     ad = add
     cl = clone
     pu = push
     rmr = rm -r
+    amend = commit --amend --no-edit
     lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
-    count = ! git ls-files | grep -Ev '.jpg|.png|.jar|.md|.tex|.pdf|.gitignore|LICENSE|pom.xml' | xargs wc -l
+	count = ! git ls-files | grep -Ev '.jpg|.png|.jar|.md|.tex|.pdf|.gitignore|LICENSE|pom.xml' | xargs wc -l
     date = "!f() { \
-            old_date=$(git log -1 --format=%cd); \
-            new_date=$(date --date="$1+day+ago"); \
-            echo "Old Date:" ${old_date}; \
-            echo "New Date:" ${new_date}; \
-            GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
+			old_date=$(git log -1 --format=%cd); \
+			new_date=$(date --date="$1+day+ago"); \
+			echo "Old Date:" ${old_date}; \
+			echo "New Date:" ${new_date}; \
+			GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
-
+    ff
