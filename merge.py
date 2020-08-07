@@ -6,12 +6,15 @@ from shutil import copy
 
 PWD = getcwd() + '/'
 HOME = expanduser('~/')
-CONFIG = f'{HOME}.config/'
+CONFIG = HOME + '.config/'
 
 
 def main():
     bash = ConfigGroup('bash/')
     bash.add_dotfiles(HOME, '.bash_login', '.bash_logout', '.bashrc')
+
+    bin = ConfigGroup('bin/')
+    bin.add_dotfiles(HOME+'bin/', '')
 
     git = ConfigGroup('git/', ignored=['credentials'])
     git.add_dotfiles(CONFIG+'git/', '')
@@ -31,7 +34,7 @@ def main():
     xorg = ConfigGroup('xorg/')
     xorg.add_dotfiles(HOME, '.Xresources', '.xinitrc')
 
-    configs = [bash, git, i3, ranger, rofi, vim, xorg]
+    configs = [bash, bin, git, i3, ranger, rofi, vim, xorg]
 
     for config in configs:
         for file in config.dotfiles:

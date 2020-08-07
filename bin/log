@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Todo:
+# - Add flags for adding, removing, modifying, or outputting.
+# - Allow handling of more than 99 entries.
+
+LOG_PATH=~/"documents/bug-log.txt"
+
+# If file exists and is not empty, remove first 5 characters from each line
+# and rewrite the file.
+if [ -s $LOG_PATH ]
+then
+    echo "$(cut -c5- $LOG_PATH)" > $LOG_PATH 
+fi
+
+# Add new entry to end of file.
+echo "$@" >> $LOG_PATH
+
+# Rewrite the file with line numbers prepended.
+echo "$(nl -n rz -w 2 -s ': ' $LOG_PATH)" > $LOG_PATH
+
