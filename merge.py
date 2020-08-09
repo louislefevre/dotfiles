@@ -19,6 +19,9 @@ def main():
     git = ConfigGroup('git/', ignored=['credentials'])
     git.add_dotfiles(CONFIG+'git/', '')
 
+    grub = ConfigGroup('grub/')
+    grub.add_dotfiles('/boot/grub/', 'grub.cfg')
+
     i3 = ConfigGroup('i3/')
     i3.add_dotfiles(CONFIG+'i3/', '')
 
@@ -34,7 +37,7 @@ def main():
     xorg = ConfigGroup('xorg/')
     xorg.add_dotfiles(HOME, '.Xresources', '.xinitrc')
 
-    configs = [bash, bin, git, i3, ranger, rofi, vim, xorg]
+    configs = [bash, bin, git, grub, i3, ranger, rofi, vim, xorg]
 
     for config in configs:
         for file in config.dotfiles:
