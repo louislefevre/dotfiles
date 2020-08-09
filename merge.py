@@ -42,7 +42,8 @@ def main():
     for config in configs:
         for file in config.dotfiles:
             output = process(file, config.repo_dir)
-            print(output)
+            if output:
+                print(output)
 
 
 def process(file: 'Dotfile', repo_dir: str) -> str:
@@ -57,7 +58,7 @@ def process(file: 'Dotfile', repo_dir: str) -> str:
                 copy(file_path, repo_path)
                 return f"{repo_name} was updated."
             else:
-                return f"{repo_name} is up to date."
+                return None
     else:
         makedirs(dirname(repo_path), exist_ok=True)
         copy(file_path, repo_path)
