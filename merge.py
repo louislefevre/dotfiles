@@ -57,8 +57,6 @@ def process(file: 'Dotfile', repo_dir: str) -> str:
             if target_file.read() != repo_file.read():
                 copy(file_path, repo_path)
                 return f"{repo_name} was updated."
-            else:
-                return None
     else:
         makedirs(dirname(repo_path), exist_ok=True)
         copy(file_path, repo_path)
@@ -97,30 +95,20 @@ class ConfigGroup:
 
 @dataclass
 class Dotfile:
-    def __init__(self, base_path: str, file_name: str):
-        self._base_path = base_path
-        self._file_name = file_name
-        self._full_path = base_path + file_name
+    base_path: str
+    file_name: str
+
+    @property
+    def full_path(self) -> str:
+        return self.base_path + self.file_name
 
     def __hash__(self):
-        return hash(self._full_path)
+        return hash(self.full_path)
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
             return NotImplemented
-        return self._base_path == other.base_path and self._file_name == other.file_name
-
-    @property
-    def base_path(self) -> str:
-        return self._base_path
-
-    @property
-    def file_name(self) -> str:
-        return self._file_name
-
-    @property
-    def full_path(self) -> str:
-        return self._full_path
+        return self.base_path == other.base_path and self.file_name == other.file_name
 
 
 if __name__ == '__main__':
