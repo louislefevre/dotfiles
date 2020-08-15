@@ -36,6 +36,7 @@ colord
 coreutils
 cryptsetup
 curl
+cython
 dav1d
 db
 dbus
@@ -357,6 +358,7 @@ sqlite
 srt
 startup-notification
 sudo
+svt-av1
 sysfsutils
 systemd
 systemd-libs
@@ -370,6 +372,7 @@ ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
 ttf-font-awesome
+ttf-symbola
 tzdata
 util-linux
 util-linux-libs
