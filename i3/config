@@ -49,10 +49,10 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Default workspace screens
-workspace $ws1 output DP-0
-workspace $ws2 output DP-0
-workspace $ws3 output DP-5
-workspace $ws4 output DP-5
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-4
+workspace $ws4 output DP-4
 
 # Default client workspaces
 assign [class="discord"] $ws4
@@ -216,7 +216,7 @@ bar {
 
 bar {
     font pango: Fira Mono 12
-    output DP-5
+    output DP-4
     tray_output DP-5
     position top
     workspace_min_width 30
