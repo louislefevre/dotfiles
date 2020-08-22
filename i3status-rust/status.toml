@@ -6,17 +6,10 @@ cpu = "  "
 
 [theme]
 name = "gruvbox-dark"
-[theme.overrides]
-alternating_tint_bg = "#282828"
-good_bg = "#3C3836"
-idle_bg = "#3C3836"
-info_bg = "#3C3836"
-warning_bg = "#CC241D"
-critical_bg = "#CC241D"
 
 [[block]]
 block = "custom"
-command = "$HOME/.config/i3/scripts/title.sh"
+command = "$HOME/.config/i3status-rust/scripts/title.sh"
 interval = 1
 
 [[block]]
@@ -28,7 +21,7 @@ on_collapsed_click = "spotify"
 
 [[block]]
 block = "memory"
-format_mem = "{Mupi}%"
+format_mem = "{mem_used_percents:1}%"
 
 [[block]]
 block = "cpu"
@@ -44,15 +37,15 @@ warning = 80
 [[block]]
 block = "pacman"
 
-#[[block]]
-#block = "custom"
-#command = "echo  $($HOME/.config/i3/scripts/trash.sh)"
-#interval = 10
+[[block]]
+block = "custom"
+command = "echo  $($HOME/.config/i3status-rust/scripts/trash.sh)"
+interval = 10
 
 #[[block]]
 #block = "custom"
 #cycle = ["echo  OFF", "echo  ON"]
-#on_click = "$HOME/.config/i3/scripts/modes.sh"
+#on_click = "$HOME/.config/i3status-rust/scripts/modes.sh"
 #interval = "once"
 
 [[block]]
@@ -68,25 +61,12 @@ block = "time"
 
 [[block]]
 block = "custom"
-command = "$HOME/.config/i3/scripts/network.sh"
+command = "$HOME/.config/i3status-rust/scripts/network.sh"
 interval = 30
 
 [[block]]
 block = "custom"
 command = "echo "
 interval = "once"
-on_click = "$HOME/.config/i3/scripts/power-menu.sh"
-
-
-#[[block]]
-#block = "nvidia_gpu"
-#show_memory = false
-#show_temperature = false
-
-#[[block]]
-#block = "net"
-#device = "enp4s0"
-#speed_min_unit = "M"
-#speed_digits = 2
-#speed_up = false
+on_click = "$HOME/.config/i3status-rust/scripts/power-menu.sh"
 

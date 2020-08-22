@@ -202,7 +202,7 @@ bar {
     tray_output none
     position top
     workspace_min_width 30
-    status_command i3status-rs $HOME/.config/i3/status.toml
+    status_command i3status-rs $HOME/.config/i3status-rust/status.toml
     colors {
         separator #666666
         background $background
@@ -233,6 +233,6 @@ bar {
 
 
 ####################################### AUTOSTART ########################################
-exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/gruvbox-battery.png
+exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/pepe-4.jpg
 exec --no-startup-id discord
 

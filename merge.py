@@ -25,6 +25,9 @@ def main():
     i3 = ConfigGroup('i3/')
     i3.add_dotfiles(CONFIG+'i3/', '')
 
+    i3status = ConfigGroup('i3status-rust/')
+    i3status.add_dotfiles(CONFIG+'i3status-rust/', '')
+
     ranger = ConfigGroup('ranger/')
     ranger.add_dotfiles(CONFIG+'ranger/', '')
 
@@ -37,7 +40,7 @@ def main():
     xorg = ConfigGroup('xorg/')
     xorg.add_dotfiles(HOME, '.Xresources', '.xinitrc')
 
-    configs = [bash, bin, git, grub, i3, ranger, rofi, vim, xorg]
+    configs = [bash, bin, git, grub, i3, i3status, ranger, rofi, vim, xorg]
 
     for config in configs:
         for file in config.dotfiles:
