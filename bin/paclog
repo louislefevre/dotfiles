@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-grep -iE "$(tail -n1 /var/log/pacman.log | grep -iEo "([0-9]{4}-[0-9]{2}-[0-9]{2})").+upgraded" /var/log/pacman.log
-
-
-
 # https://www.reddit.com/r/archlinux/comments/7se1eb/is_there_a_pacman_or_other_command_that_can/
 # https://github.com/shellkr/pachist
+
+grep -iE "$(tail -n1 /var/log/pacman.log | grep -iEo "([0-9]{4}-[0-9]{2}-[0-9]{2})").+upgraded" /var/log/pacman.log
 
