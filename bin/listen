@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo strace -p$1 -s9999 -e write
