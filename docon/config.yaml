@@ -1,0 +1,61 @@
+target: /home/louis/projects/dotfiles
+pkglist: /home/louis/projects/dotfiles/packages
+
+git:
+  author:
+    name: Louis Lefevre
+    email: louislefev@gmail.com
+
+sources:
+  bash:
+    path: /home/louis
+    include:
+      - .bash_login
+      - .bash_logout
+      - .bashrc
+
+  bin:
+    path: /home/louis/bin
+
+  code:
+    path: /home/louis/.config/Code/User
+    include:
+      - settings.json
+
+  docon:
+    path: /home/louis/.config/docon
+    include:
+      - config.yaml
+
+  git:
+    path: /home/louis/.config/git
+    exclude: 
+      - credentials
+
+  grub:
+    path: /boot/grub
+    include:
+      - grub.cfg
+
+  i3:
+    path: /home/louis/.config/i3/
+
+  i3status-rust:
+    path: /home/louis/.config/i3status-rust
+
+  ranger:
+    path: /home/louis/.config/ranger
+
+  rofi:
+    path: /home/louis/.config/rofi
+
+  vim:
+    path: /home/louis/
+    include:
+      - .vimrc
+
+  xorg:
+    path: /home/louis/
+    include:
+      - .Xresources
+      - .xinitrc
