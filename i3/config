@@ -79,7 +79,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # Open terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 # Kill window
 bindsym $mod+Shift+q kill
