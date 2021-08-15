@@ -1,33 +1,33 @@
 [user]
-	name = Louis Lefevre
+    name = Louis Lefevre
     email = louislefev@gmail.com
 [core]
-	editor = vim
+    editor = nvim
 [init]
     defaultBranch = master
 [credential]
-	helper = store
+    helper = store
 [web]
     browser = google-chrome
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [color "status"]
-	added = green bold
-	changed = yellow bold
-	untracked = red bold
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
 [color "branch"]
-	current = yellow bold
-	local = green bold
-	remote = cyan bold
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [alias]
-	st = status
-	cm = commit
+    st = status
+    cm = commit
     br = branch
     ad = add
     cl = clone
@@ -44,3 +44,4 @@
 			GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
     ff
+
