@@ -18,24 +18,3 @@
 *color14:      #8ec07c
 *color15:      #ebdbb2
 
-### URxvt ###
-URxvt.font: xft:FiraCode:style=Regular
-URxvt.boldfont: xft:FiraCode:Style=SemiBold
-URxvt.italicFont: xft:FiraCode:Style=Italic
-URxvt.boldItalicFont: xft:FiraCode:Style=BoldItalic
-
-URxvt.cursorUnderline: true
-URxvt.scrollBar: false
-
-URxvt.loginShell: true
-
-URxvt.url-lauchner: google-chrome-stable
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-
