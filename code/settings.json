@@ -16,6 +16,11 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.codeActionsOnSave": {"source.fixAll.eslint": true}
     },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {"source.fixAll.eslint": true}
+    },
     "[html]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -44,4 +49,11 @@
     "workbench.iconTheme": "vscode-icons",
     "editor.minimap.enabled": false,
     "debug.javascript.autoAttachFilter": "disabled",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true
+    },
 }
