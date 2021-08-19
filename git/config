@@ -10,7 +10,10 @@
 [web]
     browser = google-chrome
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
+[difftool]
+    prompt = false
+    trustExitCode = true
 [color "status"]
     added = green bold
     changed = yellow bold
