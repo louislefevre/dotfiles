@@ -43,17 +43,19 @@ sources:
   i3status-rust:
     path: /home/louis/.config/i3status-rust
 
+  kitty:
+    path: /home/louis/.config/kitty
+
   ranger:
     path: /home/louis/.config/ranger
 
   rofi:
     path: /home/louis/.config/rofi
 
-  vim:
-    path: /home/louis/
+  nvim:
+    path: /home/louis/.config/nvim
     include:
-      - .vimrc
-
+      - init.vim
   xorg:
     path: /home/louis/
     include:
