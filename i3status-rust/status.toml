@@ -5,11 +5,12 @@ memory_mem = ""
 cpu = ""
 
 [theme]
-name = "gruvbox-dark"
+name = "circuit"
 
 [[block]]
 block = "custom"
 command = "$HOME/.config/i3status-rust/scripts/title.sh"
+hide_when_empty = true
 interval = 1
 
 [[block]]
@@ -18,6 +19,13 @@ player = "spotify"
 buttons = ["play"]
 max_width = 40
 on_collapsed_click = "spotify"
+
+[[block]]
+block = "net"
+device = "enp4s0"
+format = ""
+format_alt = "{speed_up;K} {speed_down;K}"
+interval = 3
 
 [[block]]
 block = "memory"
@@ -52,7 +60,7 @@ interval = 10
 
 [[block]]
 block = "xrandr"
-icons = false
+format = "{brightness}"
 interval = 6000  # Causes lag every update
 
 [[block]]
@@ -71,4 +79,3 @@ block = "custom"
 command = "echo "
 interval = "once"
 on_click = "$HOME/.config/i3status-rust/scripts/power-menu.sh"
-
