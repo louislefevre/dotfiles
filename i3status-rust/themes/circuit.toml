@@ -1,0 +1,22 @@
+idle_bg = "#2b3745"
+idle_fg = "#f8f8f2"
+
+info_bg = "#2b3745"
+info_fg = "#f8f8f2"
+
+good_bg = "#2b3745"
+good_fg = "#f8f8f2"
+
+warning_bg = "#f1962e"
+warning_fg = "#f8f8f2"
+
+critical_bg = "#ff5555"
+critical_fg = "#f8f8f2"
+
+separator = "\ue0b2"
+separator_bg = "auto"
+separator_fg = "auto"
+
+alternating_tint_bg = "#0d1a20"
+#alternating_tint_bg = "#2b3745"
+#alternating_tint_bg = "#0552aa"
