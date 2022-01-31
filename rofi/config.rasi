@@ -1,8 +1,8 @@
 configuration {
-    modi: "drun,window,combi";
+    modi: "drun,window,filebrowser,combi";
     combi-modi: "window,drun,ssh";
     font: "Fira Mono 12";
     show-icons: true;
-    terminal: "urxvt";
+    terminal: "kitty";
 }
 
