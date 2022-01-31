@@ -1,6 +1,7 @@
 [user]
     name = Louis Lefevre
     email = louislefev@gmail.com
+    signingkey = EF399792F26595AF
 [core]
     editor = nvim
 [init]
@@ -9,6 +10,10 @@
     helper = store
 [web]
     browser = google-chrome
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
 [diff]
     tool = nvimdiff
 [difftool]
