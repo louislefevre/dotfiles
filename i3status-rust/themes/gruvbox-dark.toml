@@ -1,15 +1,20 @@
 idle_bg = "#3c3836"
 idle_fg = "#ebdbb2"
+
 info_bg = "#3c3836"
 info_fg = "#ebdbb2"
+
 good_bg = "#3c3836"
 good_fg = "#ebdbb2"
-warning_bg = "#cc251d"
+
+warning_bg = "#cc241d"
 warning_fg = "#ebdbb2"
+
 critical_bg = "#cc241d"
 critical_fg = "#ebdbb2"
+
 separator = "\ue0b2"
 separator_bg = "auto"
 separator_fg = "auto"
-alternating_tint_bg = "#282828"
 
+alternating_tint_bg = "#282828"
