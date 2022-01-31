@@ -1,24 +1,24 @@
 ##########################################################################################
 ####################################### DESIGN  ##########################################
 # Colour variables
-set_from_resource $background background #282828
-set_from_resource $foreground foreground #ebdbb2
-set_from_resource $color0 color0 #282828
-set_from_resource $color1 color1 #cc241d
-set_from_resource $color2 color2 #98971a
-set_from_resource $color3 color3 #d79921
-set_from_resource $color4 color4 #458588
-set_from_resource $color5 color5 #b16286
-set_from_resource $color6 color6 #689d6a
-set_from_resource $color7 color7 #a89984
-set_from_resource $color8 color8 #928374
-set_from_resource $color9 color9 #fb4934
-set_from_resource $color10 color10 #b8bb26
-set_from_resource $color11 color11 #fabd2d
-set_from_resource $color12 color12 #83a598
-set_from_resource $color13 color13 #d3869b
-set_from_resource $color14 color14 #8ec07c
-set_from_resource $color15 color15 #ebdbb2
+set_from_resource $background background
+set_from_resource $foreground foreground
+set_from_resource $color0 color0
+set_from_resource $color1 color1
+set_from_resource $color2 color2
+set_from_resource $color3 color3
+set_from_resource $color4 color4
+set_from_resource $color5 color5
+set_from_resource $color6 color6
+set_from_resource $color7 color7
+set_from_resource $color8 color8
+set_from_resource $color9 color9
+set_from_resource $color10 color10
+set_from_resource $color11 color11
+set_from_resource $color12 color12
+set_from_resource $color13 color13
+set_from_resource $color14 color14
+set_from_resource $color15 color15
 
 # i3
 focus_follows_mouse no
@@ -86,6 +86,10 @@ bindsym $mod+Shift+q kill
 
 # Open program launcher
 bindsym $mod+d exec rofi -theme gruvbox-dark-soft -show
+
+# Take screenshot
+bindsym Print exec maim ~/pictures/screenshots/$(date +%s).png
+bindsym Shift+Print exec maim ~/pictures/screenshots/$(date +%s).png -s
 
 # Change focus
 bindsym $mod+h focus left
@@ -235,6 +239,6 @@ bar {
 
 
 ####################################### AUTOSTART ########################################
-exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/gruvbox-pacman.png
+exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/circuit.jpg
 exec --no-startup-id discord
 
