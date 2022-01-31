@@ -1,5 +1,7 @@
 target: /home/louis/projects/dotfiles
-pkglist: /home/louis/projects/dotfiles/packages
+pkglist:
+  path: /home/louis/projects/dotfiles/packages/
+  name: pkgs-{time}.txt
 
 git:
   author:
@@ -8,7 +10,7 @@ git:
 
 sources:
   bash:
-    path: /home/louis
+    path: /home/louis/
     include:
       - .bash_login
       - .bash_logout
@@ -38,7 +40,7 @@ sources:
       - grub.cfg
 
   i3:
-    path: /home/louis/.config/i3/
+    path: /home/louis/.config/i3
 
   i3status-rust:
     path: /home/louis/.config/i3status-rust
@@ -56,6 +58,7 @@ sources:
     path: /home/louis/.config/nvim
     include:
       - init.vim
+
   xorg:
     path: /home/louis/
     include:
