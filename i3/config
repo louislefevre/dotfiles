@@ -85,7 +85,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Open program launcher
-bindsym $mod+d exec rofi -theme gruvbox-dark-soft -show
+bindsym $mod+d exec rofi -show
 
 # Take screenshot
 bindsym Print exec maim ~/pictures/screenshots/$(date +%s).png
@@ -239,6 +239,5 @@ bar {
 
 
 ####################################### AUTOSTART ########################################
-exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/circuit.jpg
+exec --no-startup-id feh --no-fehbg --bg-scale ~/pictures/system-images/background/rocket-dark.png
 exec --no-startup-id discord
-
