@@ -1,0 +1,138 @@
+/********* Configuration *********/
+@theme "/dev/null"
+
+configuration {
+  modi: "drun,window,filebrowser";
+  terminal: "kitty";
+  sidebar-mode: true;
+  show-icons: true;
+  sort: true;
+  sorting-method: "normal";
+  disable-history: false;
+  scroll-method: 0;
+  drun-display-format: "{name}";
+  matching: "fuzzy";
+  window-thumbnail: false;
+
+  display-drun: "Apps";
+  display-window: "Windows";
+  display-filebrowser: "Files";
+
+  filebrowser {
+    directory: "/home/louis/";
+    directories-first: true;
+    sorting-method: "name";
+  }
+}
+
+
+/********* Colours *********/
+* {
+  background: #0d1a20;
+  background2: #2b3745;
+  background3: #495357;
+  foreground: #f8f8f2;
+  button: #f8f8f2;
+  background-color:	@background;
+  text-color: @foreground;
+}
+
+
+/********* Primary Window Container *********/
+window {
+  transparency: "screenshot";
+  width: 500px;
+  border-radius: 15px;
+  height: 340px;
+}
+
+mainbox {
+  children: [ mode-switcher, inputbar, listview ];
+}
+
+
+/********* Mode Switcher *********/
+mode-switcher {
+  spacing: 2px;
+  border-radius: 10px;
+  background-color:	inherit;
+  text-color: inherit;
+  margin: 10px 50px 5px 50px;
+}
+
+button {
+  padding: 8px;
+  font: "Fira Mono Bold 14";
+  background-color:	@background2;
+  vertical-align:	0.5; 
+  horizontal-align:	0.5;
+}
+
+button selected {
+  padding: 8px;
+  background-color:	@button;
+  text-color: @background2;
+}
+
+
+/********* Search Bar *********/
+inputbar {
+  children: [ entry ];
+  expand: false;
+  padding: 5px 10px 5px 10px;
+}
+
+prompt { 
+  enabled: true; 
+  background-color:	@background2;
+  padding: 15px;
+  border-radius: 15px;
+  font: "Fira Mono Bold 16";
+}
+
+entry {
+  background-color:	@background3;
+  placeholder: "Search";
+  expand: true;
+  padding: 10px;
+  border-radius: 10px;
+  font: "Fira Mono Italic 14";
+}
+
+
+/********* Element List Container *********/
+listview {
+  columns: 1;
+  cycle: false;
+  dynamic: true;
+  layout: vertical;
+  scrollbar: false;
+}
+
+
+/********* Elements *********/
+element {
+  orientation: horizontal;
+  margin: 5px 10px 0px 10px;
+  border-radius: 10px;
+  background-color:	@background2;
+}
+
+element-text {
+  expand: true;
+  margin: 5px 5px 5px 5px;
+  font: "Fira Mono 12";
+  background-color:	inherit;
+  text-color: inherit;
+}
+
+element-icon {
+    background-color: inherit;
+    margin: 5px 5px 5px 5px;
+}
+
+element selected {
+  background-color:	@button;
+  text-color: @background2;
+  border-radius: 10px;
+}

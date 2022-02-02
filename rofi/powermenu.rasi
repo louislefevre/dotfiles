@@ -1,0 +1,88 @@
+/********* Configuration *********/
+@theme "/dev/null"
+
+configuration {
+	font:							"Fira Mono 12";
+    show-icons:                     false;
+	icon-theme: 					"Papirus";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+	sidebar-mode: 					false;
+}
+
+
+/********* Colours *********/
+* {
+    /* Container Colours */
+    background:                     #0d1a20;
+    foreground:                     #f8f8f2;
+    border:               			#3c11aa;
+
+    /* Element Colours */
+    background-alt:                 #2b3745;
+    background-selected:            #1db2c2;
+    foreground-alt:                 #f8f8f2;
+    foreground-selected:            #2b3745;
+
+    /* Border Colours */
+    border-alt:               		#1db2c2;
+    border-selected:                #0552aa;
+}
+
+
+/********* Primary Window Container *********/
+window {
+    transparency:                   "screenshot";
+    background-color:               @background;
+    text-color:                     @foreground;
+    border-radius:                  20px;
+    height:                         15.4%;
+    width:                          34.7%;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+mainbox {
+    background-color:               inherit;
+    children:                       [ listview ];
+    padding:                        0.7%;
+}
+
+
+/********* Element List Container *********/
+listview {
+    background-color:               inherit;
+    margin:                         0% 0% 0% 0%;
+    spacing:                        0.5%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         horizontal;
+}
+
+
+/********* Elements *********/
+element {
+    background-color:               @background-alt;
+    text-color:                     @foreground-alt;
+    orientation:                    horizontal;
+    border-radius:                  25px;
+    border:                  		0.2% 0.2% 0.2% 0.2%;
+    border-color:                  	@border-alt;
+    width:                          8%;
+}
+
+element-text {
+    background-color: 				#00000000;
+    text-color:       				inherit;
+	font:							"Fira Mono 32";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         4.5% 2.7% 4.5% 2.7%;
+}
+
+element selected {
+    background-color:               @background-selected;
+    text-color:                     @foreground-selected;
+}
