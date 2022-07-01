@@ -1,0 +1,16 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 12.0,
+    "editor.lineSpacing": 1.1,
+    "showShortcuts": false,
+    "editor.showScrollbarMarks": true,
+    "editor.alwaysShowHorizontalScrollbar": true,
+    "editor.alwaysShowVerticalScrollbar": true,
+    "editor.honorCamelHumps": false,
+    "editor.showCodeVision": true,
+    "enableIndenter": true,
+    "launchTerminalOnOpen": true,
+    "go.root": "/usr/lib/go/",
+    "go.path": "/home/louis/go/",
+    "go.modules": "true"
+}
