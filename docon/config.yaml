@@ -31,7 +31,7 @@ sources:
 
   git:
     path: /home/louis/.config/git
-    exclude: 
+    exclude:
       - credentials
 
   grub:
@@ -64,3 +64,8 @@ sources:
     include:
       - .Xresources
       - .xinitrc
+
+  fleet:
+    path: /home/louis/.fleet
+    include:
+      - settings.json
