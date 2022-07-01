@@ -1,71 +1,82 @@
 {
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "editor.renderWhitespace": "trailing",
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontSize": 12,
-    "window.titleBarStyle": "custom",
-    "files.autoSave": "afterDelay",
-    "editor.wordWrapColumn": 120,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.rulers": [120],
-    "debug.console.wordWrap": false,
-    "prettier.printWidth": 120,
-    "[javascript]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-        "editor.codeActionsOnSave": {"source.fixAll.eslint": true}
-    },
-    "[typescript]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-        "editor.codeActionsOnSave": {"source.fixAll.eslint": true}
-    },
-    "[html]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-    },
-    "[css]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-    },
-    "[json]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "tabnine.experimentalAutoImports": true,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.minimap.enabled": false,
-    "debug.javascript.autoAttachFilter": "disabled",
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": true
-    },
-    "git.enableCommitSigning": true,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "redhat.telemetry.enabled": false,
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/louis/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-    "go.toolsManagement.autoUpdate": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontSize": 12,
+  "window.titleBarStyle": "custom",
+  "files.autoSave": "afterDelay",
+  "editor.wordWrapColumn": 120,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.rulers": [
+    120
+  ],
+  "debug.console.wordWrap": false,
+  "prettier.printWidth": 120,
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.minimap.enabled": false,
+  "debug.javascript.autoAttachFilter": "disabled",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "git.enableCommitSigning": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "redhat.telemetry.enabled": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m",
+  "go.toolsManagement.autoUpdate": true,
+  "colorize.include": [
+    "*.Xresources",
+    "*.rasi",
+    "*.conf"
+  ]
 }
