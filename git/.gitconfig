@@ -3,22 +3,44 @@
     email = louislefev@gmail.com
     signingkey = EF399792F26595AF
 [core]
-    editor = nvim
+    editor = vim
 [init]
     defaultBranch = master
 [credential]
     helper = store
+[credential "https://github.com"]
+    username = louislefevre
+[gpg]
+    program = C:/Program Files/Git/usr/bin/gpg.exe
 [web]
-    browser = google-chrome
+    browser = chrome
+[browser "chrome"]
+    path = C:/Program Files/Google/Chrome/Application/chrome.exe
+[branch]
+    sort = -committerdate
+[fetch]
+    prune = true
+    prunetags = true
 [commit]
     gpgsign = true
+    verbose = false
+[push]
+    autoSetupRemote = true
+    followtags = true
+[merge]
+    conflictstyle = diff3
+[rebase]
+    autosquash = true
 [tag]
     gpgsign = true
+    sort = taggerdate
 [diff]
     tool = nvimdiff
 [difftool]
     prompt = false
     trustExitCode = true
+[log]
+    date = iso
 [color "status"]
     added = green bold
     changed = yellow bold
@@ -40,8 +62,10 @@
     ad = add
     cl = clone
     pu = push
+    pl = pull
     rmr = rm -r
     amend = commit --amend --no-edit
+    p4 = !python.exe 'C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git-p4'
     lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
     count = ! git ls-files | grep -Ev '.jpg|.png|.jar|.md|.tex|.pdf|.gitignore|LICENSE|pom.xml' | xargs wc -l
     date = "!f() { \
@@ -51,5 +75,6 @@
                     echo "New Date:" ${new_date}; \
                     GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
-    ff
-
+    configall = config --list --show-origin
+    cmds = !gh gist view 2bf583b76ac034295cbdc52f78d827c8
+    addcmd = !gh gist edit 2bf583b76ac034295cbdc52f78d827c8
