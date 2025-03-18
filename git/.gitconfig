@@ -65,6 +65,7 @@
     pl = pull
     rmr = rm -r
     amend = commit --amend --no-edit
+    configall = config --list --show-origin
     p4 = !python.exe 'C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git-p4'
     lsd = log --pretty=format:"%C(yellow)%h\\ \\|\\ %ad%C(reset)\\ \\-\\ %s%C(red)%d%C(reset)" --decorate --date=short
     count = ! git ls-files | grep -Ev '.jpg|.png|.jar|.md|.tex|.pdf|.gitignore|LICENSE|pom.xml' | xargs wc -l
@@ -75,6 +76,3 @@
                     echo "New Date:" ${new_date}; \
                     GIT_COMMITTER_DATE="$"\""${new_date}$"\""" git commit --amend --no-edit --date "$"\""${new_date}$"\"""; \
         }; f"
-    configall = config --list --show-origin
-    cmds = !gh gist view 2bf583b76ac034295cbdc52f78d827c8
-    addcmd = !gh gist edit 2bf583b76ac034295cbdc52f78d827c8
